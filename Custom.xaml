@@ -1,0 +1,112 @@
+﻿ <local:MyCard Title="欢迎！" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="mods文件夹内有未使用的模组，可以选择性打开" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="此整合包受@Apricityx_更新支持(也许?)" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="True"
+                   Text="进入游戏后若无mod，打开版本隔离即可" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="" />
+        <TextBlock TextWrapping="Wrap" FontSize="15" Foreground="#db1a39"
+                   Text="整合包最后更新日期：2023.7.7" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="保持最新版本来避免不必要的BUG" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="" />
+        <local:MyButton Margin="0,8,0,10" Width="300" Height="45" ColorType="Highlight"
+                   Text="查看MCT公告" EventType="打开网页" EventData="https://shimo.im/docs/XCHRDcvk3YDtKWhk" />
+        <local:MyButton Grid.Column="1" Margin="0,8,0,10" Width="300" Height="45" ColorType="Highlight" 
+                        Text="快速进入 MCT" EventType="启动游戏" EventData="1.20.1|s.mctown.tech" ToolTip="MCT，启动！" />
+        <local:MyListItem Margin="-5,15,-5,0" 
+                          Logo="https://wiki.biligame.com/images/mc/thumb/1/19/6c6k3y3kiajsgjsg0q1kjckt01dzu1q.png/104px-Minecraft.net_favicon.png" Title="WIKI镜像" Info="不懂就查" 
+                          EventType="打开网页" EventData="https://wiki.biligame.com/mc/Minecraft_Wiki" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0" 
+                          Logo="https://cn.bing.com/favicon.ico" Title="MCT卫星地图" Info="AC-130 ABOVE！" 
+                          EventType="打开网页" EventData="http://162.14.81.178:8123/" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0" 
+                          Logo="https://i.loli.net/2021/08/25/ym7Ob9MW8iBkfAE.png" Title="Curseforge" Info="老牌mod平台" 
+                          EventType="打开网页" EventData="https://www.modrinth.com/mods" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0" 
+                          Logo="https://i.loli.net/2021/08/25/1UawFuKb7scfTG2.png" Title="Modrinth" Info="新兴fabric mod平台" 
+                          EventType="打开网页" EventData="https://www.curseforge.com/minecraft/mc-mods" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Title="客户端管理" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15"> 
+        <!-- 第一行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <!-- 打开Resources文件夹 -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Resourcepacks" EventType="打开文件" EventData="../.minecraft/versions/1.20.1/resourcepacks" ToolTip="此为材质包文件夹"/>
+
+
+            <!-- 打开Version文件夹 -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Version" EventType="打开文件" EventData="../.minecraft/versions" ToolTip="开启版本隔离后，Versions文件夹将会储存该版本中所有的游戏文件"/>
+
+            <!-- 光嘤 -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Shaderpacks" EventType="打开文件" EventData="../.minecraft/versions/1.20.1/shaderpacks" ToolTip="此为光影包文件夹"/>
+
+
+        </StackPanel>
+
+        <!-- 第二行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <!--  -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Mods" EventType="打开文件" EventData="../.minecraft/versions/1.20.1/mods" ToolTip="此为模组文件夹"/>
+
+            <!--  -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Config" EventType="打开文件" EventData="../.minecraft/versions/1.20.1/config" ToolTip="此为配置文件夹"/>
+
+            <!--  -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+            Text="Saves" EventType="打开文件" EventData="../.minecraft/versions/1.20.1/saves" ToolTip="此为存档文件夹"/>
+
+
+        </StackPanel>
+
+        <!-- 第三行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <!-- 今日人品 -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Red"
+            Text="今日人品" EventType="今日人品" ToolTip="呜哇~" />
+
+            <!--  -->
+            <local:MyButton Margin="0,0,10,0" Width="120" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Red"
+            Text="刷新主页" EventType="刷新主页"/>
+
+
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+ <local:MyCard Title="客户端功能说明 v2023.7.7" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" FontSize="15"
+                 Text="&#xA;放大" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;按住[Alt]不放即可放大视角" />
+        <TextBlock TextWrapping="Wrap" FontSize="15"
+                 Text="&#xA;查找箱子内物品" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;背包内对准物品按Y键即可高亮所寻找的物品" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;或点击背包右上角的放大镜按钮使用该功能" />
+        <TextBlock TextWrapping="Wrap" FontSize="15"
+                 Text="&#xA;Masa全家桶" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;不必多说，X+C打开Tweakeroo界面，M打开Litematica（投影）界面，不懂的多问即可" />
+        <TextBlock TextWrapping="Wrap" FontSize="15"
+                 Text="&#xA;锁定物品" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;背包内指针指向需要锁定的物品使用[Alt]+左键" />
+        <TextBlock TextWrapping="Wrap" FontSize="10"
+                 Text="&#xA;可避免误触造成的装备丢失（Q键释放剑气）" />
+        <TextBlock TextWrapping="Wrap" FontSize="8" Foreground="#db1a39"
+                 Text="&#xA;待续，有时间继续写，会自动更新" />      
+    </StackPanel>
+</local:MyCard>
