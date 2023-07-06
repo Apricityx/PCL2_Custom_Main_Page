@@ -107,6 +107,6 @@
         <TextBlock TextWrapping="Wrap" FontSize="10"
                  Text="&#xA;可避免误触造成的装备丢失（Q键释放剑气）" />
         <TextBlock TextWrapping="Wrap" FontSize="8" Foreground="#db1a39"
-                 Text="&#xA;待续，有时间继续写，会自动更新" />      
+                 Text="&#xA;摆了，有时间继续写，会自动更新" />      
     </StackPanel>
 </local:MyCard>
